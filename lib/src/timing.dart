@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:timeing/src/show_text.dart';
 
 class Timing extends StatefulWidget {
   Timing({Key key}) : super(key: key);
@@ -11,14 +12,6 @@ class Timing extends StatefulWidget {
 class _TimingState extends State<Timing> {
   DateTime now;
   Timer timer;
-
-  String fillTime(int x) {
-    if (x < 10) {
-      return "0" + x.toString();
-    }
-
-    return x.toString();
-  }
 
   void startTimer() {
     const timeout = Duration(seconds: 1);
@@ -50,19 +43,16 @@ class _TimingState extends State<Timing> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            fillTime(now.hour),
-          ),
-          Text(
-            fillTime(now.minute),
-          ),
-          Text(
-            fillTime(now.second),
-          ),
-        ],
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            ShowText(now.hour),
+            ShowText(now.minute),
+            ShowText(now.second),
+          ],
+        ),
       ),
     );
   }

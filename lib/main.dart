@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'timing',
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: Container(
           child: Timing(
             key: ValueKey("homepage"),
