@@ -3,13 +3,13 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:timeing/src/show_text.dart';
 
-class Timing extends StatefulWidget {
-  Timing({Key key}) : super(key: key);
+class App extends StatefulWidget {
+  App({Key key}) : super(key: key);
 
-  _TimingState createState() => _TimingState();
+  _AppState createState() => _AppState();
 }
 
-class _TimingState extends State<Timing> {
+class _AppState extends State<App> {
   DateTime now;
   Timer timer;
 
