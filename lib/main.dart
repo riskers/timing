@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black,
         body: Container(
-          child: Timing(
-            key: ValueKey("homepage"),
-          ),
+          child: Timing(),
         ),
       ),
     );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ShowText extends StatelessWidget {
-  final int n;
-  const ShowText(this.n, {Key key}) : super(key: key);
+  final int text;
+  const ShowText(this.text, {Key key}) : super(key: key);
 
   String _fillTime(int x) {
     if (x < 10) {
@@ -15,7 +15,7 @@ class ShowText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      _fillTime(n),
+      _fillTime(text),
       style: TextStyle(
         fontWeight: FontWeight.bold,
         color: Colors.white,
