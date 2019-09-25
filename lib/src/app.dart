@@ -43,16 +43,25 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            ShowText(now.hour),
-            ShowText(now.minute),
-            ShowText(now.second),
-          ],
-        ),
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+            top: 20,
+            left: 20,
+            child: ShowText(now.hour),
+          ),
+          Positioned(
+            top: 20,
+            left: 100,
+            child: ShowText(now.minute),
+          ),
+          Positioned(
+            top: 20,
+            left: 180,
+            child: ShowText(now.second),
+          ),
+          // ShowText(now.second),
+        ],
       ),
     );
   }

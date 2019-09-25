@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'timing',
       home: Scaffold(
         backgroundColor: Colors.black,
-        body: Container(
-          child: App(),
-        ),
+        body: App(),
       ),
     );
   }
