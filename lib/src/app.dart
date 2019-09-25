@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:timeing/src/show_text.dart';
 
 class App extends StatefulWidget {
@@ -30,12 +31,21 @@ class _AppState extends State<App> {
   @override
   void initState() {
     super.initState();
+
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeRight,
+    ]);
+
     now = DateTime.now();
     startTimer();
   }
 
   @override
   void dispose() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     super.dispose();
     stopTimer();
   }
